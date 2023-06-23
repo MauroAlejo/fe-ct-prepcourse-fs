@@ -240,7 +240,7 @@ function tieneTresDigitos(num) {
    // Caso contrario, retornar false.
    // Tu código:
    return num>=100 && num<1000;
-   
+   //var numero=num.tostring() - Convierte un número a String
 }
 
 function doWhile(num) {
