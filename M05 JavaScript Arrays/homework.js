@@ -75,11 +75,11 @@ function arrayContiene(array, elemento) {
      
    //return array.includes(elemento);  /// METODO 1
    for (var i=0; i<array.length; i++); {
-      if (array[i]===elemento){
+      if (array[i] === elemento){
          return true;
       }
-      return false;
    }
+   return false;
 }
 
 function agregarNumeros(arrayOfNums) {
@@ -174,9 +174,14 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   var string = num.tostring();
-   if (string[0]==="9"){
-      return true
+   //var valor = num.tostring();
+   //if (valor[0]==="9"){
+   //   return true
+   //}else{
+   //   return false;
+   //}
+   if (num >= 900 && num < 1000){
+      return true;
    }else{
       return false;
    }
@@ -203,9 +208,12 @@ function mesesDelAño(array) {
    var meses = [];
    array.forEach(function(mes){
       if (mes === "Enero" || mes === "Marzo" || mes === "Noviembre"){
-         meses = mes
+         meses.push(mes);
       }
+      return meses;
    })
+   return "No se encontraron los meses pedidos";
+   
 }
 
 function tablaDelSeis() {
