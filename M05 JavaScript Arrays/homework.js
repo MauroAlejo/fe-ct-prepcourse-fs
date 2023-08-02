@@ -74,8 +74,9 @@ function arrayContiene(array, elemento) {
    // Tu código:
      
    //return array.includes(elemento);  /// METODO 1
-   for (var i=0; i<array.length; i++); {
-      if (array[i] === elemento){
+   // METODO 2
+   for (var i=0; i<array.length; i++){
+      if (elemento === array[i]){
          return true;
       }
    }
@@ -174,14 +175,9 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   //var valor = num.tostring();
-   //if (valor[0]==="9"){
-   //   return true
-   //}else{
-   //   return false;
-   //}
-   if (num >= 900 && num < 1000){
-      return true;
+   var valor = num.toString();
+   if (valor[0] == "9"){
+      return true
    }else{
       return false;
    }
@@ -192,10 +188,10 @@ function todosIguales(array) {
    // Caso contrario retornar false.
    // Tu código:
    var iguales = array[0];
-   for (i=1; i<array.acclength; i++){
-      if (iguales !== array[i]){
-         return false;
-      }
+   for (i=1; i<array.length; i++){
+      if (iguales === array[i]){
+         
+      }else return false;
    }
    return true;
 }
@@ -210,10 +206,10 @@ function mesesDelAño(array) {
       if (mes === "Enero" || mes === "Marzo" || mes === "Noviembre"){
          meses.push(mes);
       }
-      return meses;
-   })
-   return "No se encontraron los meses pedidos";
-   
+   }); 
+   if (meses.includes("Enero") && meses.includes("Marzo") && meses.includes("Noviembre")){}
+   else return "No se encontraron los meses pedidos";
+   return meses;
 }
 
 function tablaDelSeis() {
@@ -251,6 +247,13 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var suma = num;
+   var arregloFinal = [];
+   for (var i=0; i<10; i++){
+      suma = suma + 2;
+      arregloFinal.push(suma);
+      if (suma === i) return "Se interrumpió la ejecución";
+   }return arregloFinal;
 }
 
 function continueStatement(num) {
@@ -260,6 +263,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var suma = num;
+   var arregloFinal = [];
+   for (var i=0; i<10; i++){
+      if (i === 4){
+         suma = suma;
+      }else{
+      suma = suma + 2;
+      arregloFinal.push(suma);
+      }
+   }return arregloFinal;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
